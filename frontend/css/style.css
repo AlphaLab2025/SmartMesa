@@ -248,3 +248,32 @@ section {
     font-size: 1rem;
 }
 
+/* Avaliações */
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.review-card {
+    background: var(--secondary-background-color);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.review-card p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--main-background-color);
+    margin-bottom: 1rem;
+}
+
+.review-card h4 {
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
