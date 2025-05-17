@@ -88,7 +88,7 @@ section {
 
 .header > section > nav > a{
     margin: 0 1rem;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--main-text-color);
     text-decoration: none;
     transition: 0.3s ease;
