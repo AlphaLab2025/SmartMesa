@@ -123,6 +123,7 @@ section {
     font-weight: lighter;
     padding: 1rem 0;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .btn-default{
@@ -195,6 +196,7 @@ section {
     color: var(--main-text-color);
     line-height: 1.8rem;
     padding: 1rem 0;
+    text-align: justify;
 }
 
 /* Cardápio */
@@ -264,6 +266,7 @@ section {
     border-radius: 15px;
     width: 300px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: justify;
 }
 
 .review-card p {
@@ -314,4 +317,5 @@ section {
 .location-text p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    text-align: justify;
 }
