@@ -125,7 +125,7 @@ section {
     line-height: 1.8;
 }
 
-#content-home > div > a{
+.btn-default{
     text-decoration: none;
     background: var(--secondary-color);
     color: var(--main-background-color);
@@ -140,10 +140,57 @@ section {
     display: inline-block;
 }
 
-#content-home > div > a:hover{
+.btn-default:hover{
     background: var(--main-background-color);
     color: var(--secondary-color);
     border: 0.1rem solid var(--secondary-color);
     letter-spacing: 0.1rem;
 }
 
+#content-about > h2{
+    text-align: center;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 3rem;
+}
+
+#content-about > h2 > span{
+    color: var(--secondary-color);
+}
+
+#content-about > .container-about{
+    display: flex;
+    align-items: center;
+    background: var(--main-background-color);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+#content-about > .container-about > .img-about{
+    flex: 1 1 34rem;
+}
+
+#content-about > .container-about > .img-about > img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#content-about > .container-about > .text-about{
+    flex: 1 1 35rem;
+    padding: 2rem;
+}
+
+#content-about > .container-about > .text-about > h3{
+    font-size: 2rem;
+    color: var(--main-text-color);
+}
+
+#content-about > .container-about > .text-about > p{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--main-text-color);
+    line-height: 1.8rem;
+    padding: 1rem 0;
+}
