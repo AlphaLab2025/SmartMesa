@@ -2,17 +2,17 @@ const { PrismaClient } = require('../generated/prisma');
 const prisma = new PrismaClient();
 
 async function main() {
-  // Cria mesas de 1 a 12
+ 
   const mesas = Array.from({ length: 12 }, (_, i) => ({
     numero: i,
   }));
 
   await prisma.mesa.createMany({
     data: mesas,
-    skipDuplicates: true, // evita erro se já existirem
+    skipDuplicates: true,
   });
 
-  // Cria usuários
+ 
   await prisma.usuario.createMany({
     data: [
       {
