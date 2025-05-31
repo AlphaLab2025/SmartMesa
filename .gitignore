@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment files
+.env
+
+# Build output
+dist/
+build/
+
+# Prisma generated client (se quiser evitar subir)
+# /generated/
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

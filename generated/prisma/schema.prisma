@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// Gera o cliente Prisma (usado para interagir com o banco no código)
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+// Define qual banco será usado e de onde vem a URL de conexão
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// TABELAS (models)
+model Mesa {
+  id       Int       @id @default(autoincrement()) // chave primária
+  numero   Int       @unique // número da mesa (não pode repetir)
+  reservas Reserva[] // uma mesa pode ter várias reservas
+}
+
+model Reserva {
+  id          Int           @id @default(autoincrement()) // id da reserva
+  dataHora    DateTime // quando a reserva foi marcada
+  quantidade  Int // quantas pessoas
+  nomeCliente String // nome do cliente que reservou
+  status      StatusReserva @default(RESERVADA) // status inicial
+  mesaId      Int // Chave estrangeira para mesa
+  mesa        Mesa          @relation(fields: [mesaId], references: [id]) // Chave estrangeira para mesa
+  garcomId    Int? // Chave estrangeira opcional para garçom que confirmou
+  garcom      Usuario?      @relation("GarcomReservas", fields: [garcomId], references: [id]) // relaciona com o garçom que confirmou a reserva (se houver)
+}
+
+// Usuário genérico do sistema (pode ser atendente, garçom ou gerente)
+model Usuario {
+  id       Int         @id @default(autoincrement()) // chave primária auto incremental
+  nome     String // nome da pessoa
+  tipo     TipoUsuario // enum: ATENDENTE, GARCOM, GERENTE
+  reservas Reserva[]   @relation("GarcomReservas") // reservas que ele confirmou (se for um garçom)
+}
+
+// ENUMS (tipos fixos)
+// Status possível da reserva
+enum StatusReserva {
+  RESERVADA
+  CONFIRMADA
+  CANCELADA
+}
+
+// Tipos de usuários no sistema
+enum TipoUsuario {
+  ATENDENTE
+  GARCOM
+  GERENTE
+}
