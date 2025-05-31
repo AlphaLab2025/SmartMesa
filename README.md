@@ -19,7 +19,7 @@ Antes de rodar o projeto, certifique-se de que:
 
 - **Node.js** está instalado (v18+ recomendado)
 - **PostgreSQL** está instalado e o comando `psql` disponível no terminal
-- A variável de ambiente `DATABASE_URL` está definida corretamente(Coloque sua senha definida no postgress) no arquivo `.env`, por exemplo:
+- A variável de ambiente `DATABASE_URL` está definida corretamente(Coloque sua senha definida no postgress) no arquivo `.env` (que deve ficar na raiz do projeto), desta maneira:
 
 
 DATABASE_URL="postgresql://postgres:"SUA-SENHA-DO-POSTGRESS"@localhost:5432/mydb" 
@@ -29,7 +29,7 @@ DATABASE_URL="postgresql://postgres:"SUA-SENHA-DO-POSTGRESS"@localhost:5432/mydb
 const config = {
   user: 'postgres',
   host: 'localhost',
-  password: 'SUA-SENHA-DO-POSTGRESS', // Substitua pela sua senha real sua_senha_aqui
+  password: 'SUA-SENHA-DO-POSTGRESS',  Substitua pela sua senha real sua_senha_aqui
   port: 5432,
   database: 'postgres'
 };
