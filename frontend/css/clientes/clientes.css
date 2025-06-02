@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+      --primary-color: #AA0000;
+      --secondary-color: #FFD700;
+      --main-background-color: #1C1C1C;
+      --secondary-background-color: #F8F5F0;
+      --detail-color: #2E8B57;
+      --main-text-color: var(--secondary-background-color);
+      --secondary-text-color: var(--main-background-color);
+      --border-color: rgba(0, 0, 0, 0.1);
+    }
+
+/* Body */
+
+body{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-background-color);
+}
+
+/* Main */
+
+main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main-content */
+
+.main-content{
+    background: var(--secondary-background-color);
+    border-radius: 14px;
+    margin: 14px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Main-content-header */
+
+.header-content{
+    background: var(--primary-color);
+    padding: 24px;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+/* Form */
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*Form content*/
+
+.form-content{
+    margin-bottom: 8px;
+    padding: 18px 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-content > label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content > input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid var(--border-color);
+}
+
+.form-content > p{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: lighter;    
+    font-size: 14px;
+    visibility: hidden;
+}
+
+/*Form Buttons*/
+
+.form-buttons{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.form-buttons > button{
+    color: var(--main-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    font-size: 16px;
+    width: 20%;
+}
+
+.btn-reserva{
+    background: var(--detail-color);
+}
+
+.btn-reserva:hover{
+    background: #097a3a;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+.btn-limpar{
+    background: var(--primary-color);
+}
+
+.btn-limpar:hover{
+    background: #7a0000;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
