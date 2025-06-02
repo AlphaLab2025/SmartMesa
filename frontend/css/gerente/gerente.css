@@ -1,0 +1,48 @@
+@import url('../clientes/clientes.css'); /* Importa o :root do CSS universal dos clientes */
+
+.tabela-relatorio {
+  padding: 0 20px 20px;
+  overflow-x: auto;
+}
+
+.tabela-relatorio table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.tabela-relatorio th,
+.tabela-relatorio td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.tabela-relatorio th {
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
+}
+
+.tabela-relatorio tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mensagem-status {
+  padding: 14px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--primary-color);
+  display: none; /* Exiba via JS caso necessário */
+}
+
+.mensagem-erro {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: lighter;
+  font-size: 14px;
+  visibility: hidden; /* Pode ser alterado via JS */
+}
