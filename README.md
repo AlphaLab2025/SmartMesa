@@ -64,6 +64,8 @@ Este comando irá:
 
 -Popular com 12 mesas via seed
 
+-Popular com 3 funcionarios
+
 -Abrir o Prisma Studio (interface visual para o banco)
 
  **Após rodar esse comando ele te mostrará as tabelas do banco e seus dados em uma tela, partindo deste ponto se quiser continuar utilizando essa interface visual e não a do próprio postgress crie um outro terminal e continue o passo a passo, caso contrário aperte ctrl + c para parar a execuão do comando anterior e dar prosseguimento ao passo a passo :**
