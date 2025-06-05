@@ -142,7 +142,7 @@ SMARTMESA/
 ## 🛠 Scripts Úteis
 | Comando              | Descrição                                                 |
 | -------------------- | --------------------------------------------------------- |
-| `npm run create-db`  | Cria o banco PostgreSQL `mydb`                            |
+| `npm run initDb`     | Cria o banco PostgreSQL `mydb`                            |
 | `npx prisma studio`  | Abre o Prisma Studio (visualização do banco)              |
 | `npx prisma db push` | Aplica o schema do Prisma ao banco                        |
 | `npx prisma db seed` | Executa o script de seed                                  |
