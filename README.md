@@ -19,12 +19,13 @@ Antes de rodar o projeto, certifique-se de que:
 
 - **Node.js** está instalado (v18+ recomendado)
 - **PostgreSQL** está instalado e o comando `psql` disponível no terminal
-- A variável de ambiente `DATABASE_URL` está definida corretamente(Coloque sua senha definida no postgress) no arquivo `.env` (que deve ficar na raiz do projeto), desta maneira:
+- A variável de ambiente `DATABASE_URL` está definida corretamente(Coloque sua senha definida no postgress) no arquivo `.env` (que deve ser criado e ficar na raiz do projeto), desta maneira:
 
-
+**Atenção:** NA SUA SENHA RETIRE AS "
+```
 DATABASE_URL="postgresql://postgres:"SUA-SENHA-DO-POSTGRESS"@localhost:5432/mydb" 
-
-- Coloque também a sua senha definida no postgress no arquivo createDb.js, dentro da pasta scripts:
+```
+- Coloque também a sua senha definida no postgress no arquivo createDb.js e no createPg.js, dentro da pasta scripts:
 
 const config = {
   user: 'postgres',
@@ -51,7 +52,14 @@ cd projeto-xavier-api
 ```
 npm install
 ```
-3. **Crie o Banco de dados:**:
+
+3.   **Crie o arquivo .env na raiz do projeto e coloque essa url:**
+```
+DATABASE_URL="postgresql://postgres:"SUA-SENHA-DO-POSTGRESS"@localhost:5432/mydb" 
+```
+**SUBSTITUINDO SUA-SENHA-DO-POSTGRESS PELA SUA SENHA CRIADA NO MOMENTO DA INSTALAÇÃO DO POSTGRESS**
+
+4. **Crie o Banco de dados:**:
 **Atenção: é possível criar o banco utilizando sql que é o padrão(porém o usuário só poderá visualizar as tabelas por meio do pgAdmin4) Ou utilizando o prisma para gerar as tabelas**
 
 ### SQL
@@ -134,7 +142,6 @@ SMARTMESA/
 ## 🛠 Scripts Úteis
 | Comando              | Descrição                                                 |
 | -------------------- | --------------------------------------------------------- |
-| `npm run dev`        | Cria o banco, aplica o schema, roda o seed e inicia a API |
 | `npm run create-db`  | Cria o banco PostgreSQL `mydb`                            |
 | `npx prisma studio`  | Abre o Prisma Studio (visualização do banco)              |
 | `npx prisma db push` | Aplica o schema do Prisma ao banco                        |
