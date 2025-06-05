@@ -1,45 +1,33 @@
+// scripts/createDb.js
 const { Client } = require('pg');
-const fs = require('fs');
 
-async function main() {
-  const client = new Client({
-    user: 'postgres', 
-    password: 'SUA-SENHA', // Substitua pela sua senha real
-    host: 'localhost',
-    port: 5432,
-    database: 'postgres', 
-  });
+const dbName = 'mydb';
+const config = {
+  user: 'postgres',
+  host: 'localhost',
+  password: 'SUASENHA_AQUI', // Substitua pela sua senha real
+  port: 5432,
+  database: 'postgres'
+};
 
+const client = new Client(config);
+
+async function ensureDatabase() {
   try {
     await client.connect();
+    const res = await client.query(`SELECT 1 FROM pg_database WHERE datname = $1`, [dbName]);
 
-   
-    await client.query('CREATE DATABASE mydb');
-    console.log('Banco de dados "mydb" criado.');
-
-    await client.end();
-
-    const newClient = new Client({
-      user: 'postgres',
-      password: 'SUA-SENHA', // Substitua pela sua senha real
-      host: 'localhost',
-      port: 5432,
-      database: 'mydb',
-    });
-
-    await newClient.connect();
-
-    // Lê o conteúdo do arquivo .sql
-    const sql = fs.readFileSync('./model/mydb.sql', 'utf8');
-
-    // Executa o SQL completo
-    await newClient.query(sql);
-    console.log('Estrutura do banco criada com sucesso.');
-
-    await newClient.end();
+    if (res.rowCount === 0) {
+      await client.query(`CREATE DATABASE ${dbName}`);
+      console.log(`✅ Banco '${dbName}' criado com sucesso.`);
+    } else {
+      console.log(`ℹ️ Banco '${dbName}' já existe.`);
+    }
   } catch (err) {
-    console.error('Erro:', err.message);
+    console.error('Erro ao verificar/criar o banco:', err.message);
+  } finally {
+    await client.end();
   }
 }
 
-main();
+ensureDatabase();
