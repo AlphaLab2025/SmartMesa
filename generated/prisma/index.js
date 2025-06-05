@@ -156,7 +156,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Carva\\OneDrive\\Área de Trabalho\\Projeto Xavier\\Api\\generated\\prisma",
+      "value": "C:\\Users\\Carva\\OneDrive\\Área de Trabalho\\projeto final\\SmartMesa\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -170,7 +170,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\Carva\\OneDrive\\Área de Trabalho\\Projeto Xavier\\Api\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\Carva\\OneDrive\\Área de Trabalho\\projeto final\\SmartMesa\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

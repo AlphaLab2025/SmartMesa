@@ -2,7 +2,7 @@ const { PrismaClient } = require('../generated/prisma');
 const prisma = new PrismaClient();
 
 async function main() {
- 
+  // Cria mesas
   const mesas = Array.from({ length: 12 }, (_, i) => ({
     numero: i,
   }));
@@ -12,24 +12,23 @@ async function main() {
     skipDuplicates: true,
   });
 
- 
-  await prisma.usuario.createMany({
-    data: [
-      {
-        nome: 'Gerente João',
-        tipo: 'GERENTE',
-      },
-      {
-        nome: 'Garçom Pedro',
-        tipo: 'GARCOM',
-      },
-      {
-        nome: 'Garçom Ana',
-        tipo: 'GARCOM',
-      },
-    ],
-    skipDuplicates: true,
-  });
+  // Usuários a criar
+  const usuarios = [
+    { nome: 'João', tipo: 'GERENTE' },
+    { nome: 'Pedro', tipo: 'GARCOM' },
+    { nome: 'Ana', tipo: 'GARCOM' },
+    { nome: 'Felipe', tipo: 'ATENDENTE' },
+  ];
+
+  for (const usuario of usuarios) {
+    const existe = await prisma.usuario.findFirst({
+      where: { nome: usuario.nome, tipo: usuario.tipo },
+    });
+
+    if (!existe) {
+      await prisma.usuario.create({ data: usuario });
+    }
+  }
 
   console.log('Mesas e usuários criados com sucesso!');
 }

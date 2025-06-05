@@ -1,7 +1,4 @@
-const prisma = require('../model/prisma');
-
-
-
+const db = require('../model/db');
 
 exports.reservasPorPeriodo = async (req, res) => {
   const { inicio, fim } = req.query;
@@ -11,26 +8,21 @@ exports.reservasPorPeriodo = async (req, res) => {
   }
 
   try {
-    const reservas = await prisma.reserva.findMany({
-      where: {
-        dataHora: {
-          gte: new Date(inicio),
-          lte: new Date(fim),
-        },
-      },
-    });
+    const result = await db.query(
+      `SELECT * FROM "Reserva"
+       WHERE "dataHora" BETWEEN $1 AND $2`,
+      [inicio, fim]
+    );
 
-    if (!reservas.length) {
+    if (!result.rows.length) {
       return res.json({ mensagem: 'Nenhuma reserva no período.' });
     }
 
-    res.json(reservas);
+    res.json(result.rows);
   } catch (err) {
     res.status(500).json({ mensagem: 'Erro ao buscar reservas.', erro: err.message });
   }
 };
-
-
 
 exports.reservasPorMesa = async (req, res) => {
   const { mesa } = req.params;
@@ -40,23 +32,20 @@ exports.reservasPorMesa = async (req, res) => {
   }
 
   try {
-    const reservas = await prisma.reserva.findMany({
-      where: {
-        mesaId: parseInt(mesa),
-      },
-    });
+    const result = await db.query(
+      `SELECT * FROM "Reserva" WHERE "mesaId" = $1`,
+      [parseInt(mesa)]
+    );
 
-    if (!reservas.length) {
+    if (!result.rows.length) {
       return res.json({ mensagem: 'Nenhuma reserva encontrada para essa mesa.' });
     }
 
-    res.json(reservas);
+    res.json(result.rows);
   } catch (err) {
     res.status(500).json({ mensagem: 'Erro ao buscar reservas.', erro: err.message });
   }
 };
-
-
 
 exports.reservasPorGarcom = async (req, res) => {
   const { garcom } = req.params;
@@ -66,20 +55,17 @@ exports.reservasPorGarcom = async (req, res) => {
   }
 
   try {
-    const reservas = await prisma.reserva.findMany({
-      where: {
-        garcomId: parseInt(garcom),
-      },
-    });
+    const result = await db.query(
+      `SELECT * FROM "Reserva" WHERE "garcomId" = $1`,
+      [parseInt(garcom)]
+    );
 
-    if (!reservas.length) {
+    if (!result.rows.length) {
       return res.json({ mensagem: 'Nenhuma confirmação feita por esse garçom.' });
     }
 
-    res.json(reservas);
+    res.json(result.rows);
   } catch (err) {
     res.status(500).json({ mensagem: 'Erro ao buscar confirmações.', erro: err.message });
   }
 };
-
-
