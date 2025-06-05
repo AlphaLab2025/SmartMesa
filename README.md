@@ -59,7 +59,7 @@ DATABASE_URL="postgresql://postgres:"SUA-SENHA-DO-POSTGRESS"@localhost:5432/mydb
 ```
 **SUBSTITUINDO SUA-SENHA-DO-POSTGRESS PELA SUA SENHA CRIADA NO MOMENTO DA INSTALAÇÃO DO POSTGRESS**
 
-4. **Crie o Banco de dados:**:
+4. **Crie o Banco de dados:**
 **Atenção: é possível criar o banco utilizando sql que é o padrão(porém o usuário só poderá visualizar as tabelas por meio do pgAdmin4) Ou utilizando o prisma para gerar as tabelas**
 
 ### SQL
