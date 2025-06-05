@@ -4,8 +4,8 @@
   "main": "api.js",
   "scripts": {
     "start": "node ./api.js",
+    "initDb": "node ./scripts/createPg.js",
     "initPrisma": "npm run create-db && npx prisma generate && npx prisma db push && npx prisma db seed && npm run viewDb",
-    "initdb": "node ./scripts/createPg.js",
     "db": "npx prisma migrate dev && npx prisma db seed",
     "create-db": "node scripts/createDb.js",
     "generate": "npx prisma generate",

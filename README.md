@@ -48,11 +48,30 @@ cd projeto-xavier-api
 ```
 
 2. **Instale as dependencias**:
-
+```
 npm install
+```
+3. **Crie o Banco de dados:**:
+**Atenção: é possível criar o banco utilizando sql que é o padrão(porém o usuário só poderá visualizar as tabelas por meio do pgAdmin4) Ou utilizando o prisma para gerar as tabelas**
 
-3. **Inicie o projeto em modo desenvolvimento:**:
-npm run dev
+### SQL
+```
+npm run initdb
+```
+Este comando irá:
+
+-criar o banco mydb (se não existir)
+
+-Criar as tabelas do banco
+
+-Popular com 12 mesas
+
+-Popular com 3 funcionários
+
+### Prisma
+```
+npm run initPrisma
+```
 
 Este comando irá:
 
@@ -75,18 +94,41 @@ npm start
 
 
 ## 🧪 Estrutura do Projeto
-.
-├── prisma/
-│   ├── schema.prisma     # Definição das tabelas e enums
-│   └── seed.js           # Script de seed para gerar mesas
-├── scripts/
-│   └── createDb.js       # Criação automática do banco PostgreSQL
+```
+SMARTMESA/
 ├── controller/
-│   └── reservaController.js
+│   ├── garcomController.js
+│   ├── gerenteController.js
+│   ├── mesaController.js
+│   ├── reservaController.js
+│   └── usuariosController.js
 ├── generated/
-│   └── prisma/           # Client Prisma gerado automaticamente
-├── api.js                # Ponto de entrada da API
-└── package.json
+├── model/
+│   ├── db.js
+│   └── mydb.sql
+├── node_modules/
+├── prisma/
+│   ├── migrations/
+│   ├── schema.prisma
+│   └── seed.js
+├── routes/
+│   ├── atendente.js
+│   ├── garcom.js
+│   ├── gerente.js
+│   ├── mesa.js
+│   └── usuarios.js
+├── scripts/
+│   ├── createDb.js
+│   └── createPg.js
+├── .env
+├── .gitignore
+├── api.js
+├── comentario.txt
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
 
 ## 🛠 Scripts Úteis
