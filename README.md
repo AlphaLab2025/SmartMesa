@@ -9,7 +9,7 @@ API para gerenciamento de **reservas de mesas** em um restaurante, utilizando **
 - Node.js
 - Express
 - PostgreSQL
-- Prisma ORM
+- Prisma ORM (Opcional)
 
 ---
 
