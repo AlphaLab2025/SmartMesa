@@ -5,7 +5,7 @@ const dbName = 'mydb';
 const config = {
   user: 'postgres',
   host: 'localhost',
-  password: 'Bilibidao01', // Substitua pela sua senha real sua_senha_aqui
+  password: 'SUA-SENHA', // Substitua pela sua senha real sua_senha_aqui
   port: 5432,
   database: 'postgres'
 };

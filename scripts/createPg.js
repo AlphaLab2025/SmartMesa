@@ -4,7 +4,7 @@ const fs = require('fs');
 async function main() {
   const client = new Client({
     user: 'postgres', 
-    password: 'Bilibidao01', // Substitua pela sua senha real
+    password: 'SUA-SENHA', // Substitua pela sua senha real
     host: 'localhost',
     port: 5432,
     database: 'postgres', 
@@ -21,7 +21,7 @@ async function main() {
 
     const newClient = new Client({
       user: 'postgres',
-      password: 'Bilibidao01', // Substitua pela sua senha real
+      password: 'SUA-SENHA', // Substitua pela sua senha real
       host: 'localhost',
       port: 5432,
       database: 'mydb',
