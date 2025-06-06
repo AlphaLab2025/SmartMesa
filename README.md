@@ -21,7 +21,6 @@ Antes de rodar o projeto, certifique-se de que:
 - **PostgreSQL** está instalado e o comando `psql` disponível no terminal
 - A variável de ambiente `DATABASE_URL` está definida corretamente(Coloque sua senha definida no postgress) no arquivo `.env` (que deve ser criado e ficar na raiz do projeto), desta maneira:
 
-**Atenção:** NA SUA SENHA RETIRE AS 
 ```
 DATABASE_URL="postgresql://postgres:SUA-SENHA-DO-POSTGRESS@localhost:5432/mydb" 
 ```
