@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerente</title>
+  <link rel="shortcut icon" href="../assets/icon/ico.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/gerente/gerente.css" />
+</head>
+<body>
+  <main>
+    <section class="main-content">
+      <div class="header-content">
+        <h2>Gerente</h2>
+      </div>
+
+      <form id="form" class="form">
+        <div class="form-content">
+          <label for="tipo-relatorio">Tipo de Relatório:</label>
+          <select id="tipo-relatorio" name="tipo-relatorio" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="periodo">Reservas por Período</option>
+            <option value="mesa">Reservas por Mesa</option>
+            <option value="garcom">Mesas Confirmadas por Garçom</option>
+          </select>
+
+          <div id="filtros-dinamicos">
+            <!-- Filtros específicos de cada tipo de relatório serão inseridos via JS -->
+          </div>
+
+          <p class="mensagem-erro">Mensagem de erro</p>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn-reserva">Buscar</button>
+          <button type="reset" class="btn-limpar">Limpar</button>
+        </div>
+      </form>
+
+      <div class="tabela-relatorio">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Hora</th>
+              <th>Mesa</th>
+              <th>Cliente</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Onde será inserido os dados -->
+          </tbody>
+        </table>
+        <p class="mensagem-status">Nenhum dado encontrado.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

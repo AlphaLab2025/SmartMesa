@@ -1,4 +1,15 @@
-# Node modules
+# Ignore environment variable files
+.env
+generated/
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build output directories
+dist/
+
+# Ignore log files  
+*.log# Node modules
 node_modules/
 
 # Logs
