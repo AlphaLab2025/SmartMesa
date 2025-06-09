@@ -49,7 +49,7 @@ const config = {
   port: 5432,
   database: 'postgres'
 };
-
+```
 > **Atenção:** o banco `mydb` será criado automaticamente ao rodar o script de desenvolvimento, se não existir.
 
 ---
