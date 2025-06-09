@@ -3,8 +3,7 @@
 
 # Ignore node_modules directory
 node_modules/
-/generated/
-/prisma/
+
 # Ignore build output directories
 dist/
 
@@ -32,5 +31,5 @@ build/
 .DS_Store
 Thumbs.db
 
-# prisma
-
+/generated/
+/prisma/
