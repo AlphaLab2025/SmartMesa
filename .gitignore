@@ -1,16 +1,11 @@
 # Ignore environment variable files
 .env
-generated/
 
 # Ignore node_modules directory
 node_modules/
 
 # Ignore build output directories
 dist/
-
-# Ignore log files  
-*.log# Node modules
-node_modules/
 
 # Logs
 logs/
@@ -25,15 +20,9 @@ pids/
 *.seed
 *.pid.lock
 
-# dotenv environment files
-.env
-
 # Build output
 dist/
 build/
-
-# Prisma generated client (se quiser evitar subir)
-# /generated/
 
 # VSCode settings
 .vscode/
@@ -41,3 +30,8 @@ build/
 # OS files
 .DS_Store
 Thumbs.db
+
+# prisma
+
+generated/
+prisma/

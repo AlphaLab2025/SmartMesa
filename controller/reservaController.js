@@ -6,7 +6,7 @@ exports.criarReserva = async (req, res) => {
   if (!data || !hora || !mesa || !quant_pessoa || !responsavel) {
     return res.status(400).json({ erro: 'Todos os campos são obrigatórios.' });
   }
-
+  console.log('Recebido:', req.body);
   try {
     const dataHora = new Date(`${data}T${hora}`);
 
