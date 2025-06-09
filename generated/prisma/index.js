@@ -156,7 +156,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Carva\\OneDrive\\Área de Trabalho\\projeto final\\SmartMesa\\generated\\prisma",
+      "value": "D:\\Unifacs\\3° Semestre\\Sistemas Distribuidos\\A3\\SmartMesa\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -170,12 +170,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\Carva\\OneDrive\\Área de Trabalho\\projeto final\\SmartMesa\\prisma\\schema.prisma",
+    "sourceFilePath": "D:\\Unifacs\\3° Semestre\\Sistemas Distribuidos\\A3\\SmartMesa\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "6.8.2",
@@ -184,6 +183,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
