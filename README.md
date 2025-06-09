@@ -12,6 +12,7 @@ Backend (API de Reservas)
 •	npm 
 •	PostgreSQL 
 •	Bibliotecas Node.js utilizadas:
+
     o	express – Framework para API REST
     o	@prisma/client – Cliente ORM Prisma
     o	sqlite3, mysql2, pg – Adaptadores de banco de dados
@@ -20,6 +21,7 @@ Backend (API de Reservas)
 Frontend
 
 • HTML5
+
 • CSS3
 
 ---
