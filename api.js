@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
+
 const api = express();
 const port = 3000;
 
+api.use(cors());
 api.use(express.json());
 
 api.use('/atendente', require('./routes/atendente'));
