@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <td>${dataFormatada}</td>
                             <td>${horaFormatada}</td>
                             <td>${mesa.numero}</td>
+                            <td>${reserva.nomeCliente || '---'}</td>
                             <td><button class="btn-confirmar" data-id="${reserva.id}">Confirmar</button></td>
                         `;
 
