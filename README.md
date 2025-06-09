@@ -41,7 +41,7 @@ Antes de rodar o projeto, certifique-se de que:
 DATABASE_URL="postgresql://postgres:SUA-SENHA-DO-POSTGRESS@localhost:5432/mydb" 
 ```
 - Coloque também a sua senha definida no postgress no arquivo createDb.js e no createPg.js, dentro da pasta scripts:
-
+```
 const config = {
   user: 'postgres',
   host: 'localhost',
