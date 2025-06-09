@@ -1,8 +1,21 @@
 const express = require('express');
 const cors = require('cors');
+const { default: open } = require('open');
+const path = require('path');
 
 const api = express();
 const port = 3000;
+
+(async () => {
+  const garcom = path.join(__dirname, 'frontend/tela-clientes', 'garcom.html');
+  const atendente = path.join(__dirname, 'frontend/tela-clientes', 'atendente.html');
+  const gerente = path.join(__dirname, 'frontend/tela-clientes', 'gerente.html');
+
+  // Abrir cada um em nova janela (usando o Chrome como exemplo)
+  await open(garcom);
+  await open(atendente);
+  await open(gerente);
+})();
 
 api.use(cors());
 api.use(express.json());
