@@ -19,7 +19,7 @@ Backend (API de Reservas)
      
 Frontend
 
-•	HTML5
+• HTML5
 • CSS3
 
 ---
@@ -49,7 +49,7 @@ const config = {
 
 ---
 
-## 🧪 Rodando o Projeto
+##  Rodando o Projeto
 
 1. **Clone o repositório**:
 
@@ -111,7 +111,7 @@ Este comando irá:
 npm start
 
 
-## 🧪 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 SMARTMESA/
@@ -150,7 +150,7 @@ SMARTMESA/
 ```
 
 
-## 🛠 Scripts Úteis
+##  Scripts Úteis
 
 | Comando              | Descrição                                                 |
 | -------------------- | --------------------------------------------------------- |
@@ -160,13 +160,13 @@ SMARTMESA/
 | `npx prisma db seed` | Executa o script de seed                                  |
 
 
-## ❓ Dúvidas 
+##  Dúvidas 
 
-💡 O banco não está sendo criado. O que pode ser?
+ O banco não está sendo criado. O que pode ser?
 
 Verifique se o psql está instalado e configurado no PATH. Rode psql --version no terminal para testar se ele está instalado corretamente.
 
-💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
+ Posso mudar o nome do banco ou a senha do PostgreSQL?
 
 Sim, basta editar a variável DATABASE_URL no .env.
 
@@ -182,6 +182,7 @@ Sim, basta editar a variável DATABASE_URL no .env.
 
 Comunicação entre Componentes
 A comunicação entre frontend e backend é feita via requisições HTTP REST. Essa abordagem foi escolhida por:
+
 •	Simplicidade e escalabilidade: REST é amplamente utilizado e bem suportado.
 •	Separação de responsabilidades: permite desacoplar completamente o frontend do backend.
 •	Fácil integração: com outras interfaces, como mobile ou dashboards administrativos.
