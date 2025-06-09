@@ -9,8 +9,11 @@ Sistema distribuído para gerenciamento de reservas de mesas em restaurantes, co
 Backend (API de Reservas)
 
 •	Node.js 
+
 •	npm 
+
 •	PostgreSQL 
+
 •	Bibliotecas Node.js utilizadas:
 
     o	express – Framework para API REST
@@ -177,7 +180,9 @@ Sim, basta editar a variável DATABASE_URL no .env.
 # Perfis de Usuário
 
 •	Atendente: Visualização geral de mesas e reservas
+
 •	Garçom: Registro de pedidos por mesa
+
 •	Gerente: Controle e gerenciamento das reservas e dos usuários
 
 # Justificativa para a Comunicação Escolhida
@@ -186,7 +191,9 @@ Comunicação entre Componentes
 A comunicação entre frontend e backend é feita via requisições HTTP REST. Essa abordagem foi escolhida por:
 
 •	Simplicidade e escalabilidade: REST é amplamente utilizado e bem suportado.
+
 •	Separação de responsabilidades: permite desacoplar completamente o frontend do backend.
+
 •	Fácil integração: com outras interfaces, como mobile ou dashboards administrativos.
 
 # Licença
