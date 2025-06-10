@@ -42,14 +42,13 @@ cd projeto-xavier-api
 npm install
 ```
 
-3.   **Crie o arquivo .env na raiz do projeto e coloque essa url:**
+3.   **Crie o arquivo .env na raiz do projeto e coloque essa variável:**
 ```
 PASSWORD_DB=SUA_SENHA_AQUI
 ```
-**SUBSTITUINDO SUA-SENHA-DO-POSTGRESS PELA SUA SENHA CRIADA NO MOMENTO DA INSTALAÇÃO DO POSTGRESS**
+**COLOQUE A SUA SENHA CRIADA NO MOMENTO DA INSTALAÇÃO DO POSTGRESS**
 
 4. **Crie o Banco de dados:**
-**Atenção: é possível criar o banco utilizando sql que é o padrão(porém o usuário só poderá visualizar as tabelas por meio do pgAdmin4) Ou utilizando o prisma para gerar as tabelas**
 
 ### SQL
 ```
@@ -57,13 +56,13 @@ npm run initdb
 ```
 Este comando irá:
 
--criar o banco mydb (se não existir)
+- Criar o banco mydb (se não existir)
 
--Criar as tabelas do banco
+- Criar as tabelas do banco
 
--Popular com 12 mesas
+- Popular com 12 mesas
 
--Popular com 3 funcionários
+- Popular com 3 funcionários
 
 ### **Inicie a api do projeto:**:
 
@@ -114,19 +113,19 @@ SMARTMESA/
 
 ## 💡 O banco não está sendo criado. O que pode ser?
 
-Verifique se o psql está instalado e configurado no PATH. Rode psql --version no terminal para testar se ele está instalado corretamente.
+- Verifique se o psql está instalado e configurado no PATH. Rode psql --version no terminal para testar se ele está instalado corretamente.
 
 ### 💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
 
-Sim, basta editar a variável PASSWORD_DB no .env.
+- Sim, basta editar a variável PASSWORD_DB no .env.
 
 ## 👥 Perfis de Usuário
 
-Atendente: Visualiza mesas e reservas
+- Atendente: Visualiza mesas e reservas
 
-Garçom: Registra pedidos por mesa
+- Garçom: Registra pedidos por mesa
 
-Gerente: Gerencia reservas e usuários
+- Gerente: Gerencia reservas e usuários
 
 ## 💬 Comunicação entre Componentes
 
