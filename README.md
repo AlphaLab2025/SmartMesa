@@ -1,8 +1,12 @@
 ### Componentes Da Equipe
 Arthur Andrade Silva - RA: 12724119792
+
 Antônio Roberto Garrido Rodrigues Filho - RA: 1272419745
+
 Eduardo de Andrade do Bomfim Júnior - RA: 12724142791
+
 Mari Alessandra Santana De Sousa - RA: 1272418409
+
 Valentin Eduardo Carvalho Bispo dos Santos - RA: 1272415745
 
 
