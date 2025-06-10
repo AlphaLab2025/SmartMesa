@@ -51,7 +51,7 @@ git clone https://github.com/AlphaLab2025/SmartMesa.git
 ```
 
 ```bash
-cd projeto-xavier-api
+cd SmartMesa
 ```
 
 2. **Instale as dependencias**:
