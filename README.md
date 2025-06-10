@@ -1,4 +1,4 @@
-### Componentes Da Equipe
+# Componentes Da Equipe
 Arthur Andrade Silva - RA: 12724119792
 
 Antônio Roberto Garrido Rodrigues Filho - RA: 1272419745
