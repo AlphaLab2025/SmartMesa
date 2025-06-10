@@ -185,7 +185,7 @@ Sim, basta editar a variável DATABASE_URL no .env.
 
 •	Gerente: Controle e gerenciamento das reservas e dos usuários
 
-# Justificativa para a Comunicação Escolhida
+# Justificativa Para a Comunicação Escolhida
 
 Comunicação entre Componentes
 A comunicação entre frontend e backend é feita via requisições HTTP REST. Essa abordagem foi escolhida por:
