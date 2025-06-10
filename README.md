@@ -69,7 +69,7 @@ PASSWORD_DB=SUA_SENHA_AQUI
 
 ### SQL
 ```
-npm run initdb
+npm run initDb
 ```
 Este comando irá:
 
