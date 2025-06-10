@@ -65,8 +65,11 @@ Este comando irá:
 
 -Popular com 3 funcionários
 
-3. **Inicie a api do projeto:**:
+### **Inicie a api do projeto:**:
+
+```
 npm start
+```
 
 
 ## 🧪 Estrutura do Projeto
@@ -108,40 +111,49 @@ SMARTMESA/
 | `npm start`          | Execute a api do projeto e abre as telas                  |
 
 ## ❓ Dúvidas 
-💡 O banco não está sendo criado. O que pode ser?
+
+## 💡 O banco não está sendo criado. O que pode ser?
 
 Verifique se o psql está instalado e configurado no PATH. Rode psql --version no terminal para testar se ele está instalado corretamente.
 
-💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
+### 💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
 
 Sim, basta editar a variável PASSWORD_DB no .env.
 
-👥 Perfis de Usuário
+## 👥 Perfis de Usuário
+
 Atendente: Visualiza mesas e reservas
 
 Garçom: Registra pedidos por mesa
 
 Gerente: Gerencia reservas e usuários
 
-💬 Comunicação entre Componentes
+## 💬 Comunicação entre Componentes
+
 A comunicação entre frontend e backend é realizada via requisições HTTP (REST), escolhida por:
 
-📦 Simplicidade e escalabilidade: REST é amplamente suportado e bem documentado
+- 📦 Simplicidade e escalabilidade: REST é amplamente suportado e bem documentado
 
-⚙️ Separação de responsabilidades: permite desacoplar o frontend do backend
+- ⚙️ Separação de responsabilidades: permite desacoplar o frontend do backend
 
-🔌 Fácil integração: compatível com web, mobile e sistemas administrativos
+- 🔌 Fácil integração: compatível com web, mobile e sistemas administrativos
 
-❓ Dúvidas Frequentes
-💡 O banco não está sendo criado. O que pode ser?
+## ❓ Dúvidas Frequentes
+
+### 💡 O banco não está sendo criado. O que pode ser?
 
 Verifique se o psql está instalado e configurado no PATH
 
 Teste com o comando: psql --version
 
-💡 Posso mudar a senha do PostgreSQL?
+### 💡 Posso mudar a senha do PostgreSQL?
 
 Sim, basta editar o valor da variável PASSWORD_DB no arquivo .env
 
-📄 Licença
+### 📄 Licença
+
 Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais informações.
+
+### 🔗 Links
+
+Repositório no GitHub: github.com/AlphaLab2025/SmartMesa
