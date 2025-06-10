@@ -1,0 +1,2 @@
+// aglomerar comandos em um só
+// criar comando para gerar banco de dados no psotgress automaticamente
