@@ -115,3 +115,33 @@ Verifique se o psql está instalado e configurado no PATH. Rode psql --version n
 💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
 
 Sim, basta editar a variável PASSWORD_DB no .env.
+
+👥 Perfis de Usuário
+Atendente: Visualiza mesas e reservas
+
+Garçom: Registra pedidos por mesa
+
+Gerente: Gerencia reservas e usuários
+
+💬 Comunicação entre Componentes
+A comunicação entre frontend e backend é realizada via requisições HTTP (REST), escolhida por:
+
+📦 Simplicidade e escalabilidade: REST é amplamente suportado e bem documentado
+
+⚙️ Separação de responsabilidades: permite desacoplar o frontend do backend
+
+🔌 Fácil integração: compatível com web, mobile e sistemas administrativos
+
+❓ Dúvidas Frequentes
+💡 O banco não está sendo criado. O que pode ser?
+
+Verifique se o psql está instalado e configurado no PATH
+
+Teste com o comando: psql --version
+
+💡 Posso mudar a senha do PostgreSQL?
+
+Sim, basta editar o valor da variável PASSWORD_DB no arquivo .env
+
+📄 Licença
+Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais informações.
