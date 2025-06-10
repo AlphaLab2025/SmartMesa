@@ -123,14 +123,6 @@ SMARTMESA/
 | `npm run initDb`     | Cria o banco PostgreSQL `mydb`                            |
 | `npm start`          | Execute a api do projeto e abre as telas                  |
 
-## ❓ Dúvidas 
-
-## 💡 O banco não está sendo criado. O que pode ser?
-
-- Verifique se o psql está instalado e configurado no PATH. Rode psql --version no terminal para testar se ele está instalado corretamente.
-
-### 💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
-
 - Sim, basta editar a variável PASSWORD_DB no .env.
 
 ## 👥 Perfis de Usuário
