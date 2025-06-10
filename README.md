@@ -1,3 +1,17 @@
+# Componentes Da Equipe
+Arthur Andrade Silva - RA: 12724119792
+
+Antônio Roberto Garrido Rodrigues Filho - RA: 1272419745
+
+Eduardo de Andrade do Bomfim Júnior - RA: 12724142791
+
+Mari Alessandra Santana De Sousa - RA: 1272418409
+
+Valentin Eduardo Carvalho Bispo dos Santos - RA: 1272415745
+
+
+
+
 # 🍽️ API de Reservas - Projeto Xavier
 
 API para gerenciamento de **reservas de mesas** em um restaurante, utilizando **Node.js**, **Express** e **PostgreSQL**.
@@ -42,14 +56,13 @@ cd projeto-xavier-api
 npm install
 ```
 
-3.   **Crie o arquivo .env na raiz do projeto e coloque essa url:**
+3.   **Crie o arquivo .env na raiz do projeto e coloque essa variável:**
 ```
 PASSWORD_DB=SUA_SENHA_AQUI
 ```
-**SUBSTITUINDO SUA-SENHA-DO-POSTGRESS PELA SUA SENHA CRIADA NO MOMENTO DA INSTALAÇÃO DO POSTGRESS**
+**COLOQUE A SUA SENHA CRIADA NO MOMENTO DA INSTALAÇÃO DO POSTGRESS**
 
 4. **Crie o Banco de dados:**
-**Atenção: é possível criar o banco utilizando sql que é o padrão(porém o usuário só poderá visualizar as tabelas por meio do pgAdmin4) Ou utilizando o prisma para gerar as tabelas**
 
 ### SQL
 ```
@@ -57,16 +70,19 @@ npm run initdb
 ```
 Este comando irá:
 
--criar o banco mydb (se não existir)
+- Criar o banco mydb (se não existir)
 
--Criar as tabelas do banco
+- Criar as tabelas do banco
 
--Popular com 12 mesas
+- Popular com 12 mesas
 
--Popular com 3 funcionários
+- Popular com 3 funcionários
 
-3. **Inicie a api do projeto:**:
+### **Inicie a api do projeto:**:
+
+```
 npm start
+```
 
 
 ## 🧪 Estrutura do Projeto
@@ -107,11 +123,42 @@ SMARTMESA/
 | `npm run initDb`     | Cria o banco PostgreSQL `mydb`                            |
 | `npm start`          | Execute a api do projeto e abre as telas                  |
 
-## ❓ Dúvidas 
-💡 O banco não está sendo criado. O que pode ser?
+- Sim, basta editar a variável PASSWORD_DB no .env.
 
-Verifique se o psql está instalado e configurado no PATH. Rode psql --version no terminal para testar se ele está instalado corretamente.
+## 👥 Perfis de Usuário
 
-💡 Posso mudar o nome do banco ou a senha do PostgreSQL?
+- Atendente: Visualiza mesas e reservas
 
-Sim, basta editar a variável PASSWORD_DB no .env.
+- Garçom: Registra pedidos por mesa
+
+- Gerente: Gerencia reservas e usuários
+
+## 💬 Comunicação entre Componentes
+
+A comunicação entre frontend e backend é realizada via requisições HTTP (REST), escolhida por:
+
+- 📦 Simplicidade e escalabilidade: REST é amplamente suportado e bem documentado
+
+- ⚙️ Separação de responsabilidades: permite desacoplar o frontend do backend
+
+- 🔌 Fácil integração: compatível com web, mobile e sistemas administrativos
+
+## ❓ Dúvidas Frequentes
+
+### 💡 O banco não está sendo criado. O que pode ser?
+
+Verifique se o psql está instalado e configurado no PATH
+
+Teste com o comando: psql --version
+
+### 💡 Posso mudar a senha do PostgreSQL?
+
+Sim, basta editar o valor da variável PASSWORD_DB no arquivo .env
+
+### 📄 Licença
+
+Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais informações.
+
+### 🔗 Links
+
+Repositório no GitHub: github.com/AlphaLab2025/SmartMesa
