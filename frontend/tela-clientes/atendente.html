@@ -34,13 +34,18 @@
                 <div class="form-buttons">
                     <button type="submit" class="btn-reserva">Reservar</button>
                     <button type="reset" class="btn-limpar">Limpar</button>
+                    <button type="submit" class="btn-cancelar" onclick="migrarReserva()">Reservas</button>
                 </div>
                 
             </form>
             
         </section>
     </main>
-
+    <script>
+        function migrarReserva(){
+            window.open("../tela-clientes/reservaAtendente.html", "_blank");
+        }
+    </script>
     <script src="../js/TelaAtendente.js"></script>
 </body>
 </html>
