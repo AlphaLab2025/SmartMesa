@@ -188,6 +188,7 @@ Sim, basta editar a variável DATABASE_URL no .env.
 # Justificativa Para a Comunicação Escolhida
 
 Comunicação entre Componentes
+
 A comunicação entre frontend e backend é feita via requisições HTTP REST. Essa abordagem foi escolhida por:
 
 •	Simplicidade e escalabilidade: REST é amplamente utilizado e bem suportado.
