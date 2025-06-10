@@ -47,7 +47,10 @@ PASSWORD_DB=COLOQUE_SUA_SENHA_DO_PG4_AQUI
 1. **Clone o repositório**:
 
 ```bash
-git clone https://github.com/seu-usuario/projeto-xavier-api.git
+git clone https://github.com/AlphaLab2025/SmartMesa.git
+```
+
+```bash
 cd projeto-xavier-api
 ```
 
