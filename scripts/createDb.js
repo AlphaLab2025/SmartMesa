@@ -1,10 +1,11 @@
 const { Client } = require('pg');
 const fs = require('fs');
+require('dotenv').config();
 
 async function main() {
   const client = new Client({
     user: 'postgres',
-    password: 'SUASENHA_AQUI', // Substitua pela sua senha real
+    password: process.env.DATABASE_PASSWORD, // Substitua pela sua senha real
     host: 'localhost',
     port: 5432,
     database: 'postgres',
@@ -26,7 +27,7 @@ async function main() {
 
     const newClient = new Client({
       user: 'postgres',
-      password: 'SUASENHA_AQUI', // Substitua pela sua senha real
+      password: process.env.DATABASE_PASSWORD, // Substitua pela sua senha real
       host: 'localhost',
       port: 5432,
       database: 'mydb',
