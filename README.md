@@ -20,9 +20,29 @@ API para gerenciamento de **reservas de mesas** em um restaurante, utilizando **
 
 ## 🚀 Tecnologias Utilizadas
 
-- Node.js
-- Express
 - PostgreSQL
+- Node.js
+- JavaScript
+## 📚 Bibliotecas Utilizadas
+
+Dependências (necessárias para o funcionamento da aplicação):
+
+| Biblioteca  | Descrição                                                                                                                                            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **cors**    | Permite que sua API aceite requisições de outros domínios (Cross-Origin Resource Sharing)                                                            |
+| **dotenv**  | Carrega variáveis de ambiente de um arquivo `.env` para `process.env`                                                                                |
+| **express** | Framework web para Node.js, facilita a criação de rotas e servidores                                                                                 |
+| **pg**      | Cliente oficial para PostgreSQL no Node.js                                                                                                           |
+
+---
+
+DevDependencies (usadas apenas durante o desenvolvimento):
+
+| Biblioteca | Descrição                                                                                                                                                |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **open**   | Abre URLs ou arquivos usando o programa padrão do sistema                                                                                                |
+| **path**   | Utilitário para lidar com caminhos de arquivos (embora `path` normalmente já seja uma lib nativa do Node.js — essa versão instalada pode ser redundante) |
+| **prisma** | ORM moderno para trabalhar com bancos de dados de forma tipada, usada para modelagem, migração e seed de dados                                           |
 
 ---
 
