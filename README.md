@@ -165,3 +165,8 @@ Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para
 ### 🔗 Links
 
 Repositório no GitHub: github.com/AlphaLab2025/SmartMesa
+
+### Youtube 
+Link do vídeo de apresentação do projeto:
+
+https://youtu.be/-JgdWe_sIF8
