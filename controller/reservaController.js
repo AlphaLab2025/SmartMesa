@@ -6,25 +6,37 @@ exports.criarReserva = async (req, res) => {
   if (!data || !hora || !mesa || !quant_pessoa || !responsavel) {
     return res.status(400).json({ erro: 'Todos os campos são obrigatórios.' });
   }
+
   console.log('Recebido:', req.body);
+
   try {
     const dataHora = new Date(`${data}T${hora}`);
 
+    const diaInicio = new Date(dataHora); 
+    diaInicio.setHours(0, 0, 0, 0); 
+
+    const diaFim = new Date(dataHora);
+    diaFim.setHours(23, 59, 59, 999); 
+
     const reservaExistente = await db.query(
       `SELECT * FROM "Reserva" 
-       WHERE "mesaId" = $1 AND "dataHora" = $2 AND "status" = 'RESERVADA'`,
-      [mesa, dataHora]
+       WHERE "mesaId" = $1 
+       AND "dataHora" BETWEEN $2 AND $3
+       AND "status" IN ('RESERVADA', 'CONFIRMADA')`,
+      [parseInt(mesa), diaInicio, diaFim]
     );
 
     if (reservaExistente.rows.length > 0) {
-      return res.status(400).json({ erro: 'Mesa já reservada nesse horário.' });
+      return res.status(400).json({
+        erro: 'Essa mesa já está reservada ou confirmada neste dia.',
+      });
     }
 
     const novaReserva = await db.query(
       `INSERT INTO "Reserva" ("dataHora", "quantidade", "nomeCliente", "mesaId", "status") 
        VALUES ($1, $2, $3, $4, 'RESERVADA') 
        RETURNING id`,
-      [dataHora, quant_pessoa, responsavel, mesa]
+      [dataHora, quant_pessoa, responsavel, parseInt(mesa)]
     );
 
     res.json({ mensagem: 'Reserva criada com sucesso.', id: novaReserva.rows[0].id });
@@ -34,6 +46,7 @@ exports.criarReserva = async (req, res) => {
     res.status(500).json({ erro: 'Erro ao criar reserva.' });
   }
 };
+
 
 exports.cancelarReserva = async (req, res) => {
   const { id } = req.body;
