@@ -29,7 +29,7 @@ Dependências (necessárias para o funcionamento da aplicação):
 
 | Biblioteca  | Descrição                                                                                                                                            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **cors**    | Permite que sua API aceite requisições de outros domínios (Cross-Origin Resource Sharing)                                                            |
+| **cors**    | Permite que a API aceite requisições de outros domínios (Cross-Origin Resource Sharing)                                                              |
 | **dotenv**  | Carrega variáveis de ambiente de um arquivo `.env` para `process.env`                                                                                |
 | **express** | Framework web para Node.js, facilita a criação de rotas e servidores                                                                                 |
 | **pg**      | Cliente oficial para PostgreSQL no Node.js                                                                                                           |
